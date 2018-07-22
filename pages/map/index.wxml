@@ -10,7 +10,15 @@
       show-location
     >
     <cover-view class="control">
-      <cover-view class="control">
+      <cover-view wx:if="{{isHelpRequested}}" class="control list">
+        <block wx:for="{{responseData}}">
+          <cover-view class="list-item">
+            <cover-view class="res-title"> {{item.label}}: </cover-view>
+            <cover-view class="res-status"> {{item.status}} </cover-view>
+          </cover-view>
+        </block>
+      </cover-view>
+      <cover-view wx:else class="control">
         <button
           type="warn"
           size="{{36}}"

@@ -5,7 +5,17 @@ Page({
     userLocated: false,
     longitude: 113.5245211,
     latitude: 23.10229,
-    isHelpRequested: false
+    isHelpRequested: false,
+    responseData: [
+      {
+        label: "上海科技大学应急响应中心",
+        status: "已响应"
+      },
+      {
+        label: "TheHack组委会",
+        status: "已通知"
+      }
+    ]
   },
   //事件处理函数
   onReady: function(e) {
@@ -27,7 +37,7 @@ Page({
   },
   requestHelp: function () {
     this.setData({
-      
+      isHelpRequested: true
     })
   }
 })
