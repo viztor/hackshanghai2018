@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="page-body">
+  <view class="page-section">
+    <map
+      id="myMap"
+      style="width: 100%; height: 100%;"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      show-location
+    >
+    <cover-view class="control">
+      <cover-view class="control">
+        <button
+          type="warn"
+          size="{{36}}"
+          bindtap="requestHelp"
+          class="SOS"
+        >
+          SOS
+        </button>
+      </cover-view>
+    </cover-view>
+    </map>
+  </view>
+</view>
